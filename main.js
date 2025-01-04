@@ -292,14 +292,48 @@
 //     document.body.style.backgroundColor = "purple"
 // })
 
-let box = document.querySelector("#light")
-let button1 = document.querySelector("#btnOn")
-let button2 = document.querySelector("#btnOff")
+// let box = document.querySelector("#light")
+// let button1 = document.querySelector("#btnOn")
+// let button2 = document.querySelector("#btnOff")
 
+// button1.addEventListener("click",function(){
+//     box.style.backgroundColor = "yellow"
+// })
+
+// button2.addEventListener("click",function(){
+//     box.style.backgroundColor = "transparent"
+// })
+
+let heading = document.querySelector("#num")
+let button1 = document.querySelector("#botincrement")
+let button2 = document.querySelector("#botreset")
+
+let value = 0
 button1.addEventListener("click",function(){
-    box.style.backgroundColor = "yellow"
-})
+    value++
+    heading.innerHTML = value
+    if (value == 10){
+        document.body.style.backgroundColor = 'red'
+    }
+    else if(value == 2){
+        document.body.style.backgroundColor = "blue"
+    }
+    else if (value == 1){
+        document.body.style.backgroundColor = "purple"
+    }
+    else if (value == 3){
+        document.body.style.backgroundColor = "cyan"
+    }
+    else if (value == 4){
+        document.body.style.backgroundColor = "orange"
+    }
+    else if (value == 5){
+        document.body.style.backgroundColor = "yellow"
+    }
+    
+});
 
 button2.addEventListener("click",function(){
-    box.style.backgroundColor = "transparent"
+    value = 0
+    heading.innerHTML = value
 })
